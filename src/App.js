@@ -8,8 +8,31 @@ import Location from './components/Location';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+      <AppProvider>
+        <div className="container">
+            <h1>Shopping App</h1>
+            <div className="row">
+                <div className="col-6">
+                    <CartValue/>
+                </div>
+                <div className="col-6">
+                    <Location />
+                </div>
+            </div>
+            <h2>Shopping Cart</h2>
+            <div className="row">
+                <div className="col-12">
+                    <ExpenseList/>
+                </div>
+            </div>
+            <h2>Add Items</h2>
+            <div className="row">
+                <div className="col-12">
+                    <ItemSelected/>
+                </div>
+            </div>
+        </div>
+    </AppProvider>
   );
 }
 
